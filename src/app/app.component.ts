@@ -1,10 +1,22 @@
 import { Component } from '@angular/core';
+@Component(
+  { selector: 'app-root', 
+  template: `
+  
+  <h1>{{ title }} </h1> 
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
-})
-export class AppComponent {
-  title = 'angular16';
+  <p> Length: {{title.length}} </p > 
+  
+  <p>Reversed: {{ getReversed(title) }} </p> `,
+   styles: [] })
+  
+
+  export class AppComponent {
+  title = 'welcome to app!';
+  getReversed(str: string) {
+    let reversed = ''; 
+    for (let i = str.length - 1; i >= 0; i--)
+     { reversed += str.substring(i, i + 1); } 
+     return reversed;
+  }
 }
