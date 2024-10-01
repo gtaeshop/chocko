@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CalendarEvent } from 'angular-calendar';
 import { addDays, addHours, startOfDay } from 'date-fns';
+//import { middleware } from './middleware';
 
 
 export const colors: any = {
@@ -23,22 +24,25 @@ export const colors: any = {
 @Component(
   { selector: 'app-root', 
   template: `
-  
-  <h1>{{ title }} </h1> 
-
-  <p> Length: {{title.length}} </p > 
-  
-  <p>Reversed: {{ getReversed(title) }} </p> 
   <mwl-calendar-week-view
   [viewDate]="viewDate"
   [events]="events"
+  (eventClicked)="eventClicked($event)"
+  
+
 >
 </mwl-calendar-week-view>
   `,
    styles: [] })
   
 
-  export class AppComponent {
+  export class AppComponent { /// implements OnInit {
+
+    
+  //async 
+  // ngOnInit(): Promise<void> {
+  //   await middleware()
+  // }
 
 
 
@@ -60,15 +64,17 @@ export const colors: any = {
       {
         start: addDays(addHours(startOfDay(new Date()), 2), 2),
         end: addDays(new Date(), 2),
-        title: 'And another',
+        title: 'And another draggble and cliquable',
+        draggable: true,
+
         color: colors.red,
       },
     ];
   title = 'welcome to app!';
-  getReversed(str: string) {
-    let reversed = ''; 
-    for (let i = str.length - 1; i >= 0; i--)
-     { reversed += str.substring(i, i + 1); } 
-     return reversed;
+
+  eventClicked({ event }: { event: CalendarEvent }): void {
+    console.log('Event clicked', event);
   }
+
+
 }
