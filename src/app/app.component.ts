@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CalendarEvent } from 'angular-calendar';
 import { addDays, addHours, startOfDay } from 'date-fns';
-//import { middleware } from './middleware';
+import { middleware } from './middleware';
 
 
 export const colors: any = {
@@ -24,6 +24,7 @@ export const colors: any = {
 @Component(
   { selector: 'app-root', 
   template: `
+  <button (click)="check()">check</button>
   <mwl-calendar-week-view
   [viewDate]="viewDate"
   [events]="events"
@@ -38,10 +39,13 @@ export const colors: any = {
 
   export class AppComponent { /// implements OnInit {
 
+  async check(){
+    await middleware()
+
+}
     
   //async 
   // ngOnInit(): Promise<void> {
-  //   await middleware()
   // }
 
 
