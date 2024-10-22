@@ -1,0 +1,90 @@
+{
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Info 6A"
+    },
+    {
+      "id": 2,
+      "name": "Info 12"
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Med",
+      "subject": "Mathematics"
+    },
+    {
+      "id": 2,
+      "name": "Salah",
+      "subject": "Science"
+    }
+  ],
+  "classes": [
+    {
+      "subject": "Science",
+      "name": "Class id2",
+      "teacherId": 2,
+      "roomId": 2,
+      "session": "sess",
+      "start": "2024-10-23T07:49:00.000Z",
+      "end": "2024-10-23T10:19:00.000Z",
+      "title": "Class 3 - Science (Salah) dans Info 12 [sess]",
+      "draggable": true,
+      "resizable": {
+        "beforeStart": true,
+        "afterEnd": true
+      },
+      "id": 2
+    },
+    {
+      "subject": "Science",
+      "name": "Class 3",
+      "teacherId": 2,
+      "roomId": 2,
+      "session": "sess",
+      "start": "2024-10-23T07:49:00.000Z",
+      "end": "2024-10-23T10:19:00.000Z",
+      "title": "Class 3 - Science (Salah) dans Info 12 [sess]",
+      "draggable": true,
+      "resizable": {
+        "beforeStart": true,
+        "afterEnd": true
+      },
+      "id": 3
+    },
+    {
+      "start": "2024-10-22T12:59:00.000Z",
+      "end": "2024-10-22T13:59:00.000Z",
+      "title": "dsi - riri (1) dans 1 [soussou]",
+      "draggable": true,
+      "resizable": {
+        "beforeStart": true,
+        "afterEnd": true
+      },
+      "subject": "riri",
+      "name": "dsi",
+      "teacherId": 1,
+      "roomId": 1,
+      "session": "soussou",
+      "id": 4
+    },
+    {
+      "start": "2024-10-22T11:17:00.000Z",
+      "end": "2024-10-22T12:17:00.000Z",
+      "title": "dsi3 - Science Naturelle (2) dans 2 [sessionZ]",
+      "draggable": true,
+      "resizable": {
+        "beforeStart": true,
+        "afterEnd": true
+      },
+      "subject": "Science Naturelle",
+      "name": "dsi3",
+      "teacherId": 2,
+      "roomId": 2,
+      "session": "sessionZ",
+      "id": 5
+    }
+  ]
+}
