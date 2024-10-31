@@ -85,6 +85,22 @@
       "roomId": 2,
       "session": "sessionZ",
       "id": 5
+    },
+    {
+      "start": "2024-10-31T07:56:00.000Z",
+      "end": "2024-10-31T08:56:00.000Z",
+      "title": "sdf - sdf (sdf) dans sdf [sdf]",
+      "draggable": true,
+      "resizable": {
+        "beforeStart": true,
+        "afterEnd": true
+      },
+      "subject": "sdf",
+      "name": "sdf",
+      "teacherId": null,
+      "roomId": null,
+      "session": "sdf",
+      "id": 6
     }
   ]
 }

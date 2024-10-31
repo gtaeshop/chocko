@@ -84,21 +84,21 @@ export class AppComponent implements OnInit {
     this.loadTimetableData();
   }
   loadTeachers() {
-    let url='http://localhost:3333/teachers' 
+    let url='https://zied-x556uj.tail58ac4.ts.net/teachers' 
     this.http.get(url).subscribe((data: any) => {
       this.teachers = data
       console.log(this.teachers)
     });
   }
   loadRooms() {
-    let url='http://localhost:3333/rooms' 
+    let url='https://zied-x556uj.tail58ac4.ts.net/rooms' 
     this.http.get(url).subscribe((data: any) => {
       this.rooms = data
       console.log(this.rooms)
     });
   }
   loadClasses() {
-    let url='http://localhost:3333/classes' 
+    let url='https://zied-x556uj.tail58ac4.ts.net/classes' 
     this.http.get(url).subscribe((data: any) => {
       this.classes = data
       console.log(this.classes)
@@ -132,7 +132,7 @@ export class AppComponent implements OnInit {
   
   }
   loadTimetableData() {
-    let url='http://localhost:3333/classes' 
+    let url='https://zied-x556uj.tail58ac4.ts.net/classes' 
    // let url=assets/timetable.json'
 
     this.http.get(url).subscribe((data: any) => {
@@ -272,7 +272,7 @@ console.log(this.classToEdit)
       roomId: Number(sessionData?.room),
       session:sessionData?.session
       }
-      let url='http://localhost:3333/classes' 
+      let url='https://zied-x556uj.tail58ac4.ts.net/classes' 
 
 
 if  (  this.classToEdit)
@@ -293,7 +293,7 @@ if  (  this.classToEdit)
   delete(sessionData:any){
 
     console.log(sessionData)
-    let url='http://localhost:3333/classes' 
+    let url='https://zied-x556uj.tail58ac4.ts.net/classes' 
     this.http.delete(url+'/'+sessionData.id).subscribe((data: any) => {
       this.loadTimetableData();
     });
@@ -309,7 +309,7 @@ if  (  this.classToEdit)
     console.log(event)
     event.start = newStart;
     event.end = newEnd;
-    let url='http://localhost:3333/classes' 
+    let url='https://zied-x556uj.tail58ac4.ts.net/classes' 
 
 
     this.http.patch(url+'/'+event.id,event).subscribe((data: any) => {
