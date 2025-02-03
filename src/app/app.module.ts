@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,7 +24,13 @@ import { FormsModule } from '@angular/forms';
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     BrowserAnimationsModule
   ],
-  providers: [],
+
+
+  providers: [
+    { provide: LOCALE_ID, useValue: 'fr-FR' }, // Définit la locale par défaut
+  ],
+
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
